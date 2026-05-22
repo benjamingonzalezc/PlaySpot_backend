@@ -2,18 +2,20 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
-// 1. Importación de Rutas
+// 1. Importación de Rutas de los Módulos
 const recintosRoutes = require('./routes/recintos.routes');
+const canchasRoutes = require('./routes/canchas.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // 2. Middlewares Globales
-app.use(cors()); // Permite la comunicación segura con el frontend de Angular
-app.use(express.json()); // Habilita el parsing de JSON en el cuerpo de las peticiones (req.body)
+app.use(cors()); // Permite la comunicación segura con el frontend en Angular
+app.use(express.json()); // Habilita la lectura de formato JSON en el cuerpo de las peticiones (req.body)
 
-// 3. Definición de Rutas (Endpoints)
+// 3. Registro de Rutas (Endpoints)
 app.use('/api/recintos', recintosRoutes);
+app.use('/api/canchas', canchasRoutes);
 
 // Ruta base de diagnóstico (Health Check)
 app.get('/', (req, res) => {
