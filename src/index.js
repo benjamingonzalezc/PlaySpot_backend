@@ -5,6 +5,7 @@ require('dotenv').config();
 // 1. Importación de Rutas de los Módulos
 const recintosRoutes = require('./routes/recintos.routes');
 const canchasRoutes = require('./routes/canchas.routes');
+const horariosRoutes = require('./routes/horarios.routes');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -16,6 +17,7 @@ app.use(express.json()); // Habilita la lectura de formato JSON en el cuerpo de 
 // 3. Registro de Rutas (Endpoints)
 app.use('/api/recintos', recintosRoutes);
 app.use('/api/canchas', canchasRoutes);
+app.use('/api/horarios', horariosRoutes);
 
 // Ruta base de diagnóstico (Health Check)
 app.get('/', (req, res) => {
