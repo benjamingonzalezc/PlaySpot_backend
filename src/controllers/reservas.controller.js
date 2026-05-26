@@ -42,7 +42,42 @@ const crearReserva = async (req, res) => {
         res.status(500).json({ error: 'Hubo un problema al procesar la reserva' });
     }
 };
+const cancelarReserva = async (req, res) => {
+    // Tomamos el ID de la reserva desde la URL
+    const { id_reserva } = req.params;
+    // Tomamos el ID del horario desde el cuerpo para volver a liberarlo
+    const { id_horario } = req.body; 
+
+    try {
+        // Paso 1: Cambiamos el estado de la reserva a 'Cancelada'
+        const { data: reservaCancelada, error: errorReserva } = await supabase
+            .from('reserva')
+            .update({ estado_reserva: 'Cancelada' })
+            .eq('id_reserva', id_reserva)
+            .select();
+
+        if (errorReserva) throw errorReserva;
+
+        // Paso 2: Volvemos a dejar 'true' la disponibilidad para que otro pueda reservar
+        const { error: errorDisponibilidad } = await supabase
+            .from('horariodisponibilidad')
+            .update({ disponible: true })
+            .eq('id_horario', id_horario);
+
+        if (errorDisponibilidad) throw errorDisponibilidad;
+
+        res.status(200).json({
+            mensaje: 'Reserva cancelada y cancha liberada exitosamente',
+            reserva: reservaCancelada[0]
+        });
+
+    } catch (error) {
+        console.error('Error al cancelar:', error);
+        res.status(500).json({ error: 'Hubo un problema al cancelar la reserva' });
+    }
+};
 
 module.exports = {
-    crearReserva
+    crearReserva,
+    cancelarReserva
 };

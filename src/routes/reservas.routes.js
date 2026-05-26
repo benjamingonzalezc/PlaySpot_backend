@@ -1,8 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const { crearReserva } = require('../controllers/reservas.controller');
+// Importamos la nueva función
+const { crearReserva, cancelarReserva } = require('../controllers/reservas.controller');
 
-// Usamos POST porque vamos a enviar datos al servidor para crear algo nuevo
+// Ruta para crear (la que ya teníamos)
 router.post('/', crearReserva);
+
+// Nueva ruta para cancelar (ejemplo: /api/reservas/1/cancelar)
+router.put('/:id_reserva/cancelar', cancelarReserva);
 
 module.exports = router;
