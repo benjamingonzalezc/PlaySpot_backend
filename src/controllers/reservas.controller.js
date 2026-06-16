@@ -3,6 +3,16 @@ const supabase = require('../config/supabaseClient');
 const crearReserva = async (req, res) => {
     // Capturamos los datos que nos envían para hacer la reserva
     const { id_usuario, id_cancha, fecha, hora_inicio, hora_fin, id_horario } = req.body;
+    // Combinamos la fecha y hora que envía el usuario
+const fechaReserva = new Date(`${fecha}T${hora_inicio}`);
+const fechaActual = new Date();
+
+// Si la fecha de la reserva es menor a la fecha actual, bloqueamos la acción
+if (fechaReserva < fechaActual) {
+    return res.status(400).json({ 
+        error: 'Máquina del tiempo no detectada: No puedes reservar en una fecha u hora del pasado.' 
+    });
+}
 
     try {
         // Paso 1: Insertamos la nueva reserva en la tabla 'reserva'
