@@ -1,12 +1,26 @@
 const express = require('express');
 const router = express.Router();
-// Importamos la nueva función
-const { crearReserva, cancelarReserva } = require('../controllers/reservas.controller');
+const { 
+    crearReserva, 
+    cancelarReserva, 
+    obtenerHistorialUsuario,
+    pagarReserva
+} = require('../controllers/reservas.controller');
+const { verificarToken } = require('../middlewares/auth.middleware');
 
-// Ruta para crear (la que ya teníamos)
+// Todas las rutas de reservas requieren autenticación token
+router.use(verificarToken);
+
+// POST /api/reservas - Crear reserva (queda Pendiente de Pago)
 router.post('/', crearReserva);
 
-// Nueva ruta para cancelar (ejemplo: /api/reservas/1/cancelar)
+// POST /api/reservas/:id_reserva/pagar - Pagar y confirmar la reserva
+router.post('/:id_reserva/pagar', pagarReserva);
+
+// PUT /api/reservas/:id_reserva/cancelar - Cancelar y liberar
 router.put('/:id_reserva/cancelar', cancelarReserva);
+
+// GET /api/reservas/usuario/:id_usuario - Ver historial
+router.get('/usuario/:id_usuario', obtenerHistorialUsuario);
 
 module.exports = router;

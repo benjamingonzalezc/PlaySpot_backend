@@ -19,9 +19,9 @@ const login = async (req, res) => {
 
         const usuario = usuarios[0];
 
-        // 2. Verificar contraseña (Asumiendo que guardaste la contraseña tal cual por ahora)
-        // Nota: En un entorno real, usarías bcrypt.compare(contrasena, usuario.contrasena_hash)
-        if (contrasena !== usuario.contrasena_hash) {
+        // 2. Verificar contraseña usando bcrypt
+        const esValida = await bcrypt.compare(contrasena, usuario.contrasena_hash);
+        if (!esValida) {
             return res.status(401).json({ error: 'Credenciales incorrectas' });
         }
 
@@ -47,5 +47,42 @@ const login = async (req, res) => {
         res.status(500).json({ error: 'Error interno del servidor' });
     }
 };
+const registro = async (req, res) => {
+    const { rut, nombre, email, contrasena, id_rol } = req.body;
 
-module.exports = { login };
+    try {
+        // Encriptar la contraseña
+        const salt = await bcrypt.genSalt(10);
+        const contrasena_hash = await bcrypt.hash(contrasena, salt);
+
+        const { data, error } = await supabase
+            .from('usuario')
+            .insert([
+                {
+                    rut,
+                    nombre,
+                    email,
+                    contrasena_hash,
+                    id_rol
+                }
+            ])
+            .select();
+
+        if (error) throw error;
+
+        res.status(201).json({
+            mensaje: 'Usuario registrado exitosamente',
+            usuario: {
+                id_usuario: data[0].id_usuario,
+                nombre: data[0].nombre,
+                email: data[0].email
+            }
+        });
+
+    } catch (error) {
+        console.error('Error en el registro:', error);
+        res.status(500).json({ error: 'Hubo un problema al registrar el usuario' });
+    }
+};
+
+module.exports = { login, registro };

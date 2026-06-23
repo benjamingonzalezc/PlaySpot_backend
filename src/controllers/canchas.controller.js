@@ -21,6 +21,82 @@ const obtenerCanchasPorRecinto = async (req, res) => {
     }
 };
 
+const crearCancha = async (req, res) => {
+    const { nombre, tipo_deporte, precio_bloque, id_recinto } = req.body;
+
+    try {
+        const { data, error } = await supabase
+            .from('cancha')
+            .insert([
+                {
+                    nombre_cancha: nombre,
+                    tipo_deporte,
+                    precio_bloque,
+                    id_recinto
+                }
+            ])
+            .select();
+
+        if (error) throw error;
+
+        res.status(201).json({
+            mensaje: 'Cancha creada exitosamente',
+            cancha: data[0]
+        });
+    } catch (error) {
+        console.error('Error al crear cancha:', error);
+        res.status(500).json({ error: 'Hubo un problema al crear la cancha' });
+    }
+};
+
+const editarCancha = async (req, res) => {
+    const { id_cancha } = req.params;
+    const { nombre, tipo_deporte, precio_bloque } = req.body;
+
+    try {
+        const { data, error } = await supabase
+            .from('cancha')
+            .update({ nombre_cancha: nombre, tipo_deporte, precio_bloque })
+            .eq('id_cancha', id_cancha)
+            .select();
+
+        if (error) throw error;
+
+        res.status(200).json({
+            mensaje: 'Cancha actualizada exitosamente',
+            cancha: data[0]
+        });
+    } catch (error) {
+        console.error('Error al editar cancha:', error);
+        res.status(500).json({ error: 'Hubo un problema al editar la cancha' });
+    }
+};
+
+const eliminarCancha = async (req, res) => {
+    const { id_cancha } = req.params;
+
+    try {
+        const { data, error } = await supabase
+            .from('cancha')
+            .delete()
+            .eq('id_cancha', id_cancha)
+            .select();
+
+        if (error) throw error;
+
+        res.status(200).json({
+            mensaje: 'Cancha eliminada exitosamente',
+            cancha: data[0]
+        });
+    } catch (error) {
+        console.error('Error al eliminar cancha:', error);
+        res.status(500).json({ error: 'Hubo un problema al eliminar la cancha' });
+    }
+};
+
 module.exports = {
-    obtenerCanchasPorRecinto
+    obtenerCanchasPorRecinto,
+    crearCancha,
+    editarCancha,
+    eliminarCancha
 };

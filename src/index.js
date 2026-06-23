@@ -7,6 +7,8 @@ const recintosRoutes = require('./routes/recintos.routes');
 const canchasRoutes = require('./routes/canchas.routes');
 const horariosRoutes = require('./routes/horarios.routes');
 const reservasRoutes = require('./routes/reservas.routes');
+const authRoutes = require('./routes/auth.routes');
+const reportesRoutes = require('./routes/reportes.routes');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -19,6 +21,8 @@ app.use('/api/recintos', recintosRoutes);
 app.use('/api/canchas', canchasRoutes);
 app.use('/api/horarios', horariosRoutes);
 app.use('/api/reservas', reservasRoutes);
+app.use('/api/auth', authRoutes);
+app.use('/api/reportes', reportesRoutes);
 // Ruta base de diagnóstico (Health Check)
 app.get('/', (req, res) => {
     res.json({ 
