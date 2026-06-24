@@ -4,7 +4,7 @@ const obtenerRecintos = async (req, res) => {
     try {
         // Hacemos un SELECT a la tabla recintodeportivo
         const { data, error } = await supabase
-            .from('recintodeportivo')
+            .from('recintos')
             .select('*');
 
         if (error) {
@@ -20,16 +20,15 @@ const obtenerRecintos = async (req, res) => {
 };
 
 const crearRecinto = async (req, res) => {
-    const { nombre, comuna, id_propietario } = req.body;
+    const { nombre, direccion } = req.body;
 
     try {
         const { data, error } = await supabase
-            .from('recintodeportivo')
+            .from('recintos')
             .insert([
                 {
                     nombre,
-                    comuna,
-                    id_propietario
+                    direccion
                 }
             ])
             .select();

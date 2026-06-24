@@ -6,9 +6,9 @@ const obtenerCanchasPorRecinto = async (req, res) => {
 
     try {
         const { data, error } = await supabase
-            .from('cancha')
+            .from('canchas')
             .select('*')
-            .eq('id_recinto', id_recinto); // Filtro: donde id_recinto sea igual al que pasamos
+            .eq('idRecinto', id_recinto); // Filtro: donde id_recinto sea igual al que pasamos
 
         if (error) {
             throw error;
@@ -22,17 +22,20 @@ const obtenerCanchasPorRecinto = async (req, res) => {
 };
 
 const crearCancha = async (req, res) => {
-    const { nombre, tipo_deporte, precio_bloque, id_recinto } = req.body;
+    const { nombre, deporte, superficie, capacidad, precioPorHora, precioBloque, idRecinto } = req.body;
 
     try {
         const { data, error } = await supabase
-            .from('cancha')
+            .from('canchas')
             .insert([
                 {
-                    nombre_cancha: nombre,
-                    tipo_deporte,
-                    precio_bloque,
-                    id_recinto
+                    nombre,
+                    deporte,
+                    superficie,
+                    capacidad,
+                    precioPorHora,
+                    precioBloque,
+                    idRecinto
                 }
             ])
             .select();
@@ -55,9 +58,13 @@ const editarCancha = async (req, res) => {
 
     try {
         const { data, error } = await supabase
-            .from('cancha')
-            .update({ nombre_cancha: nombre, tipo_deporte, precio_bloque })
-            .eq('id_cancha', id_cancha)
+            .from('canchas')
+            .update({ 
+                nombre: nombre, 
+                deporte: deporte, 
+                precioBloque: precioBloque
+             })
+            .eq('id', id_cancha)
             .select();
 
         if (error) throw error;
@@ -77,9 +84,9 @@ const eliminarCancha = async (req, res) => {
 
     try {
         const { data, error } = await supabase
-            .from('cancha')
+            .from('canchas')
             .delete()
-            .eq('id_cancha', id_cancha)
+            .eq('id', id_cancha)
             .select();
 
         if (error) throw error;
