@@ -4,7 +4,12 @@ const verificarToken = (req, res, next) => {
     // Obtenemos el token desde el header 'Authorization'
     // Formato esperado: "Bearer <token>"
     const authHeader = req.headers['authorization'];
-    const token = authHeader && authHeader.split(' ')[1];
+    let token = authHeader && authHeader.split(' ')[1];
+
+    // Fallback para tokens en query params (útil para abrir PDFs en pestañas nuevas)
+    if (!token && req.query.token) {
+        token = req.query.token;
+    }
 
     if (!token) {
         return res.status(401).json({ error: 'Acceso denegado: No se proporcionó un token.' });

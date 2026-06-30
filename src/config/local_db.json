@@ -1,0 +1,52 @@
+{
+  "pagos": [
+    {
+      "id": 1,
+      "reservaId": 99,
+      "userId": 2,
+      "monto": 15000,
+      "metodoPago": "webpay",
+      "estadoPago": "aprobado",
+      "referenciaTransaccion": "TX-TEST12345"
+    },
+    {
+      "id": 2,
+      "reservaId": 13,
+      "userId": 7,
+      "monto": 16000,
+      "metodoPago": "transferencia",
+      "estadoPago": "reembolsado",
+      "fechaPago": "2026-06-30T14:54:53.857Z",
+      "referenciaTransaccion": "TX-MR0RPYG1"
+    },
+    {
+      "id": 3,
+      "reservaId": 14,
+      "userId": 9,
+      "monto": 14000,
+      "metodoPago": "tarjeta",
+      "estadoPago": "aprobado",
+      "fechaPago": "2026-06-30T15:50:25.560Z",
+      "referenciaTransaccion": "TX-MR0TPD7C"
+    }
+  ],
+  "evaluaciones": [
+    {
+      "id": 1,
+      "reservaId": 14,
+      "userId": 9,
+      "recintoId": 2,
+      "puntuacionGeneral": 5,
+      "limpiezaCancha": 5,
+      "puntualidad": 5,
+      "comentarios": "la verdad es que estaba muy bueno",
+      "fechaEvaluacion": "2026-06-30T15:50:54.275Z"
+    }
+  ],
+  "usuarios_metadata": [
+    {
+      "userId": 9,
+      "telefono": "997759267"
+    }
+  ]
+}

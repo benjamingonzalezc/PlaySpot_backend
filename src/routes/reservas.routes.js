@@ -4,7 +4,8 @@ const {
     crearReserva, 
     cancelarReserva, 
     obtenerHistorialUsuario,
-    pagarReserva
+    pagarReserva,
+    modificarReserva
 } = require('../controllers/reservas.controller');
 const { verificarToken } = require('../middlewares/auth.middleware');
 
@@ -19,6 +20,9 @@ router.post('/:id_reserva/pagar', pagarReserva);
 
 // PUT /api/reservas/:id_reserva/cancelar - Cancelar y liberar
 router.put('/:id_reserva/cancelar', cancelarReserva);
+
+// PUT /api/reservas/:id_reserva - Modificar fecha/horario de reserva
+router.put('/:id_reserva', modificarReserva);
 
 // GET /api/reservas/usuario/:id_usuario - Ver historial
 router.get('/usuario/:id_usuario', obtenerHistorialUsuario);

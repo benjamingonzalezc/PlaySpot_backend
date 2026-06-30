@@ -2,19 +2,62 @@ const supabase = require('../config/supabaseClient');
 
 const obtenerDisponibilidad = async (req, res) => {
     const { id_cancha } = req.params;
+    // Si no se proporciona fecha, usamos el día de hoy
+    let fecha = req.query.fecha;
+    if (!fecha) {
+        fecha = new Date().toISOString().split('T')[0];
+    }
 
     try {
-        const { data, error } = await supabase
-            .from('horariodisponibilidad')
+        // 1. Obtener día de la semana (1 = Lunes, ..., 7 = Domingo)
+        const parts = fecha.split('-');
+        const d = new Date(parts[0], parts[1] - 1, parts[2]);
+        let diaSemanaNum = d.getDay(); 
+        if (diaSemanaNum === 0) diaSemanaNum = 7; // Domingo es 7 en nuestro seed
+
+        // 2. Obtener los bloques semanales definidos para la cancha en ese día de la semana
+        const { data: bloques, error: errorBloques } = await supabase
+            .from('horarios_disponibilidad')
             .select('*')
-            .eq('id_cancha', id_cancha)
-            .eq('disponible', true); // La clave: Solo traemos los que no están reservados
+            .eq('canchaId', id_cancha)
+            .eq('dia_semana', diaSemanaNum);
 
-        if (error) {
-            throw error;
-        }
+        if (errorBloques) throw errorBloques;
 
-        res.status(200).json(data);
+        // 3. Obtener reservas activas para la cancha en esa fecha específica
+        const { data: reservas, error: errorReservas } = await supabase
+            .from('reservas')
+            .select('*')
+            .eq('canchaId', id_cancha)
+            .eq('fecha', fecha)
+            .neq('estado', 'cancelada'); // Excluimos canceladas
+
+        if (errorReservas) throw errorReservas;
+
+        // 4. Mapear disponibilidad cruzando bloques de horarios con las reservas existentes
+        const disponibilidad = (bloques || []).map(b => {
+            // Verificar si este bloque horario coincide con alguna reserva
+            const reservado = (reservas || []).some(r => {
+                // Formato de hora en Supabase suele ser "HH:MM:SS" o similar. Normalizamos para comparar
+                const inicioReserva = r.horaInicio.slice(0, 5); // ej "08:00"
+                const inicioBloque = b.horaApertura.slice(0, 5); // ej "08:00"
+                return inicioReserva === inicioBloque;
+            });
+
+            return {
+                id_horario: b.id,
+                id_cancha: b.canchaId,
+                dia_semana: b.dia_semana,
+                hora_inicio: b.horaApertura,
+                hora_fin: b.horaCierre,
+                disponible: !reservado
+            };
+        });
+
+        // Ordenamos por hora de inicio para mejor visualización
+        disponibilidad.sort((a, b) => a.hora_inicio.localeCompare(b.hora_inicio));
+
+        res.status(200).json(disponibilidad);
     } catch (error) {
         console.error('Error al obtener disponibilidad:', error);
         res.status(500).json({ error: 'Hubo un problema al cargar los horarios' });
@@ -29,11 +72,11 @@ const generarHorariosSemana = async (req, res) => {
     }
 
     try {
-        // Validar que la cancha exista
+        // Validar que la cancha exista en la tabla 'canchas'
         const { data: cancha, error: errorCancha } = await supabase
-            .from('cancha')
+            .from('canchas')
             .select('*')
-            .eq('id_cancha', id_cancha)
+            .eq('id', id_cancha)
             .single();
 
         if (errorCancha || !cancha) {
@@ -68,17 +111,15 @@ const generarHorariosSemana = async (req, res) => {
             });
         }
 
-        const diasSemana = ['Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado', 'Domingo'];
+        // Días representados por número (1 = Lunes, ..., 7 = Domingo)
         const registros = [];
-
-        for (const dia of diasSemana) {
+        for (let dia = 1; dia <= 7; dia++) {
             for (const bloque of bloques) {
                 registros.push({
-                    id_cancha: parseInt(id_cancha),
+                    canchaId: parseInt(id_cancha),
                     dia_semana: dia,
-                    hora_inicio: bloque.hora_inicio,
-                    hora_fin: bloque.hora_fin,
-                    disponible: true
+                    horaApertura: bloque.hora_inicio,
+                    horaCierre: bloque.hora_fin
                 });
             }
         }
@@ -87,16 +128,16 @@ const generarHorariosSemana = async (req, res) => {
         if (reiniciar) {
             console.log(`[GENERADOR] Reiniciando disponibilidad para cancha ${id_cancha}`);
             const { error: errorBorrado } = await supabase
-                .from('horariodisponibilidad')
+                .from('horarios_disponibilidad')
                 .delete()
-                .eq('id_cancha', id_cancha);
+                .eq('canchaId', id_cancha);
             
             if (errorBorrado) throw errorBorrado;
         }
 
         // Insertar en lote
         const { data: horariosCreados, error: errorInsercion } = await supabase
-            .from('horariodisponibilidad')
+            .from('horarios_disponibilidad')
             .insert(registros)
             .select();
 

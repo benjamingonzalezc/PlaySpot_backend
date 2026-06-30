@@ -54,7 +54,7 @@ const crearCancha = async (req, res) => {
 
 const editarCancha = async (req, res) => {
     const { id_cancha } = req.params;
-    const { nombre, tipo_deporte, precio_bloque } = req.body;
+    const { nombre, deporte, precioBloque } = req.body;
 
     try {
         const { data, error } = await supabase
