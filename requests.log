@@ -1,0 +1,1055 @@
+[REQUEST] 2026-06-30T16:08:56.656Z - GET /api/pagos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNDcxOCwiZXhwIjoxNzgyODQxOTE4fQ.JlM6B6Hi3mj7STZBOelAzlNCB4VuS38s9GXl3WiBqc8","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"1ea-sTpAtQAXxNQzCbyFme+Yeh1pElw\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:08:56.705Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"reservaId":99,"userId":2,"monto":15000,"metodoPago":"webpay","estadoPago":"aprobado","referenciaTransaccion":"TX-TEST12345"},{"id":2,"reservaId":13,"userId":7,"monto":16000,"metodoPago":"transferencia","estadoPago":"reembolsado","fechaPago":"2026-06-30T14:54:53.857Z","referenciaTransaccion":"TX-MR0RPYG1"},{"id":3,"reservaId":14,"userId":9,"monto":14000,"metodoPago":"tarjeta","estadoPago":"aprobado","fechaPago":"2026-06-30T15:50:25.560Z","referenciaTransaccion":"TX-MR0TPD7C"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:08:59.548Z - GET /api/reportes/disponibilidad?fecha=2026-06-30
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNDcxOCwiZXhwIjoxNzgyODQxOTE4fQ.JlM6B6Hi3mj7STZBOelAzlNCB4VuS38s9GXl3WiBqc8","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"cancha_id":1,"cancha_nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","precioPorHora":18000,"recinto_nombre":"Arena Providencia","recinto_direccion":"Av. Providencia 2145","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":2,"cancha_nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","precioPorHora":22000,"recinto_nombre":"Arena Providencia","recinto_direccion":"Av. Providencia 2145","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":3,"cancha_nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","precioPorHora":14000,"recinto_nombre":"Club Deportivo Ñuñoa","recinto_direccion":"Av. Grecia 1800","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":4,"cancha_nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","precioPorHora":16000,"recinto_nombre":"Club Deportivo Ñuñoa","recinto_direccion":"Av. Grecia 1800","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":5,"cancha_nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","precioPorHora":25000,"recinto_nombre":"Padel Club Las Condes","recinto_direccion":"Av. Apoquindo 4500","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":6,"cancha_nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","precioPorHora":20000,"recinto_nombre":"Padel Club Las Condes","recinto_direccion":"Av. Apoquindo 4500","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":7,"cancha_nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","precioPorHora":30000,"recinto_nombre":"Estadio Municipal Maipú","recinto_direccion":"Av. Los Pajaritos 3200","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":8,"cancha_nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","precioPorHora":15000,"recinto_nombre":"Estadio Municipal Maipú","recinto_direccion":"Av. Los Pajaritos 3200","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":9,"cancha_nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","precioPorHora":12000,"recinto_nombre":"Sport Center Viña del Mar","recinto_direccion":"Av. San Martín 850","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":10,"cancha_nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","precioPorHora":18000,"recinto_nombre":"Sport Center Viña del Mar","recinto_direccion":"Av. San Martín 850","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":11,"cancha_nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","precioPorHora":16000,"recinto_nombre":"Multideportivo La Florida","recinto_direccion":"Av. Vicuña Mackenna 6100","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":12,"cancha_nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","precioPorHora":20000,"recinto_nombre":"Multideportivo La Florida","recinto_direccion":"Av. Vicuña Mackenna 6100","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":13,"cancha_nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","precioPorHora":15000,"recinto_nombre":"Tennis Club Concepción","recinto_direccion":"Av. Pedro de Valdivia 1200","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]},{"cancha_id":14,"cancha_nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","precioPorHora":22000,"recinto_nombre":"Tennis Club Concepción","recinto_direccion":"Av. Pedro de Valdivia 1200","fecha":"2026-06-30","total_bloques":10,"bloques_disponibles":10,"bloques_ocupados":0,"horarios":[{"hora_inicio":"08:00:00","hora_fin":"09:00:00"},{"hora_inicio":"09:00:00","hora_fin":"10:00:00"},{"hora_inicio":"10:00:00","hora_fin":"11:00:00"},{"hora_inicio":"11:00:00","hora_fin":"12:00:00"},{"hora_inicio":"14:00:00","hora_fin":"15:00:00"},{"hora_inicio":"15:00:00","hora_fin":"16:00:00"},{"hora_inicio":"16:00:00","hora_fin":"17:00:00"},{"hora_inicio":"18:00:00","hora_fin":"19:00:00"},{"hora_inicio":"19:00:00","hora_fin":"20:00:00"},{"hora_inicio":"20:00:00","hora_fin":"21:00:00"}]}]
+--------------------
+[REQUEST] 2026-06-30T16:09:10.577Z - GET /api/reservas/usuario/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNDcxOCwiZXhwIjoxNzgyODQxOTE4fQ.JlM6B6Hi3mj7STZBOelAzlNCB4VuS38s9GXl3WiBqc8","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: []
+--------------------
+[REQUEST] 2026-06-30T16:09:13.035Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:09:13.363Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:13.367Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:13.373Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:13.375Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:13.379Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:13.382Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:09:13.582Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:09:18.248Z - POST /api/auth/login
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"59","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"email":"benjaminomar241@gmail.com","contrasena":"123456"}
+[RESPONSE] Status: 200
+Body: {"mensaje":"Login exitoso","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNTc1OCwiZXhwIjoxNzgyODQyOTU4fQ.l5sNDJJFh6oQIt3tXcHOexlzwUXBlfotbE4sCBxieqc","usuario":{"id_usuario":9,"nombre":"Benjamin Gonzalez","email":"benjaminomar241@gmail.com","id_rol":3,"rut":"21.847.149-8","telefono":"997759267"}}
+--------------------
+[REQUEST] 2026-06-30T16:09:31.472Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:09:32.095Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:32.098Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:32.102Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:32.106Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:32.109Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:32.111Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:09:32.294Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:09:34.812Z - GET /api/recintos/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[REQUEST] 2026-06-30T16:09:34.815Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"}
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:09:35.047Z - GET /api/evaluaciones/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"evaluaciones":[],"promedioGeneral":0,"promedioLimpieza":0,"promedioPuntualidad":0,"total":0}
+--------------------
+[REQUEST] 2026-06-30T16:10:08.791Z - POST /api/auth/registro
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"121","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"rut":"216228103","nombre":"Camilo Rodriguez","email":"camilorodriguez@alu.unach.cl","contrasena":"12345678","id_rol":3}
+[RESPONSE] Status: 201
+Body: {"mensaje":"Usuario registrado exitosamente","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","usuario":{"id_usuario":10,"nombre":"Camilo Rodriguez","email":"camilorodriguez@alu.unach.cl","id_rol":3,"rut":"216228103","telefono":""}}
+--------------------
+[REQUEST] 2026-06-30T16:10:11.998Z - GET /api/reservas/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: []
+--------------------
+[REQUEST] 2026-06-30T16:10:12.764Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:10:13.126Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:10:13.128Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:10:13.131Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:10:13.134Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:10:13.136Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:10:13.139Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:10:13.429Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:10:13.678Z - GET /api/pagos/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: []
+--------------------
+[REQUEST] 2026-06-30T16:10:27.869Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"52","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656"}
+[REQUEST] 2026-06-30T16:10:29.233Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"52","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656"}
+[REQUEST] 2026-06-30T16:10:33.845Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"52","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656"}
+[REQUEST] 2026-06-30T16:10:35.057Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"52","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656"}
+[REQUEST] 2026-06-30T16:10:35.313Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"52","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656"}
+[REQUEST] 2026-06-30T16:10:36.261Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"52","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656"}
+[REQUEST] 2026-06-30T16:10:42.068Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"83","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656","contrasena_nueva":"123456778"}
+[REQUEST] 2026-06-30T16:10:43.646Z - PUT /api/usuarios/perfil
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"83","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"nombre":"Camilo Rodriguez","telefono":"988776656","contrasena_nueva":"123456778"}
+[REQUEST] 2026-06-30T16:10:50.250Z - GET /
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"47-3BK5xEaq+EOjcRqizzE5T5Ifmdw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"estado":"online","mensaje":"API de PlaySpot corriendo correctamente"}
+--------------------
+[REQUEST] 2026-06-30T16:10:55.837Z - GET /api/pagos/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: []
+--------------------
+[REQUEST] 2026-06-30T16:11:15.718Z - GET /api/reservas/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: []
+--------------------
+[REQUEST] 2026-06-30T16:11:16.283Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:11:16.507Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:16.510Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:16.513Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:16.517Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:16.520Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:16.523Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:11:16.731Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:11:27.307Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:27.311Z - GET /api/recintos/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: {"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"}
+--------------------
+[REQUEST] 2026-06-30T16:11:27.626Z - GET /api/evaluaciones/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"evaluaciones":[],"promedioGeneral":0,"promedioLimpieza":0,"promedioPuntualidad":0,"total":0}
+--------------------
+[REQUEST] 2026-06-30T16:11:32.310Z - GET /api/recintos/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"51-++gIDda8buyxh87EqcG0HQlXq0I\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:32.313Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"}
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:11:32.704Z - GET /api/horarios/cancha/7?fecha=2026-06-30
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id_horario":431,"id_cancha":7,"dia_semana":2,"hora_inicio":"08:00:00","hora_fin":"09:00:00","disponible":true},{"id_horario":432,"id_cancha":7,"dia_semana":2,"hora_inicio":"09:00:00","hora_fin":"10:00:00","disponible":true},{"id_horario":433,"id_cancha":7,"dia_semana":2,"hora_inicio":"10:00:00","hora_fin":"11:00:00","disponible":true},{"id_horario":434,"id_cancha":7,"dia_semana":2,"hora_inicio":"11:00:00","hora_fin":"12:00:00","disponible":true},{"id_horario":435,"id_cancha":7,"dia_semana":2,"hora_inicio":"14:00:00","hora_fin":"15:00:00","disponible":true},{"id_horario":436,"id_cancha":7,"dia_semana":2,"hora_inicio":"15:00:00","hora_fin":"16:00:00","disponible":true},{"id_horario":437,"id_cancha":7,"dia_semana":2,"hora_inicio":"16:00:00","hora_fin":"17:00:00","disponible":true},{"id_horario":438,"id_cancha":7,"dia_semana":2,"hora_inicio":"18:00:00","hora_fin":"19:00:00","disponible":true},{"id_horario":439,"id_cancha":7,"dia_semana":2,"hora_inicio":"19:00:00","hora_fin":"20:00:00","disponible":true},{"id_horario":440,"id_cancha":7,"dia_semana":2,"hora_inicio":"20:00:00","hora_fin":"21:00:00","disponible":true}]
+--------------------
+[REQUEST] 2026-06-30T16:11:35.475Z - GET /api/horarios/cancha/7?fecha=2026-07-04
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id_horario":471,"id_cancha":7,"dia_semana":6,"hora_inicio":"08:00:00","hora_fin":"09:00:00","disponible":true},{"id_horario":472,"id_cancha":7,"dia_semana":6,"hora_inicio":"09:00:00","hora_fin":"10:00:00","disponible":true},{"id_horario":473,"id_cancha":7,"dia_semana":6,"hora_inicio":"10:00:00","hora_fin":"11:00:00","disponible":true},{"id_horario":474,"id_cancha":7,"dia_semana":6,"hora_inicio":"11:00:00","hora_fin":"12:00:00","disponible":true},{"id_horario":475,"id_cancha":7,"dia_semana":6,"hora_inicio":"14:00:00","hora_fin":"15:00:00","disponible":true},{"id_horario":476,"id_cancha":7,"dia_semana":6,"hora_inicio":"15:00:00","hora_fin":"16:00:00","disponible":true},{"id_horario":477,"id_cancha":7,"dia_semana":6,"hora_inicio":"16:00:00","hora_fin":"17:00:00","disponible":true},{"id_horario":478,"id_cancha":7,"dia_semana":6,"hora_inicio":"18:00:00","hora_fin":"19:00:00","disponible":true},{"id_horario":479,"id_cancha":7,"dia_semana":6,"hora_inicio":"19:00:00","hora_fin":"20:00:00","disponible":true},{"id_horario":480,"id_cancha":7,"dia_semana":6,"hora_inicio":"20:00:00","hora_fin":"21:00:00","disponible":true}]
+--------------------
+[REQUEST] 2026-06-30T16:11:44.173Z - POST /api/reservas
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"100","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"id_cancha":7,"fecha":"2026-07-04","hora_inicio":"10:00:00","hora_fin":"11:00:00","id_horario":473}
+[RESPONSE] Status: 201
+Body: {"mensaje":"¡Reserva creada! Pendiente de pago para confirmar.","reserva":{"id_reserva":15,"codigo_reserva":"PLAY-VUVKKT","id":15,"codigo":"PLAY-VUVKKT","userId":10,"canchaId":7,"recintoId":4,"recintoNombre":"Estadio Municipal Maipú","canchaNombre":"Fútbol 11 Césped Natural","deporte":"fútbol","fecha":"2026-07-04","horaInicio":"10:00:00","horaFin":"11:00:00","duracionHoras":1,"precioPorHora":30000,"total":30000,"metodoPago":"webpay","estado":"pendiente","fechaCreacion":"2026-06-30T16:11:44.402268+00:00"}}
+--------------------
+[REQUEST] 2026-06-30T16:11:45.804Z - POST /api/reservas/15/pagar
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"31","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"metodo_pago":"transferencia"}
+[RESPONSE] Status: 200
+Body: {"mensaje":"Pago simulado procesado con éxito y reserva confirmada.","reserva":{"id_reserva":15,"codigo_reserva":"PLAY-VUVKKT","id":15,"codigo":"PLAY-VUVKKT","userId":10,"canchaId":7,"recintoId":4,"recintoNombre":"Estadio Municipal Maipú","canchaNombre":"Fútbol 11 Césped Natural","deporte":"fútbol","fecha":"2026-07-04","horaInicio":"10:00:00","horaFin":"11:00:00","duracionHoras":1,"precioPorHora":30000,"total":30000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:11:44.402268+00:00"},"pagoSimulado":{"idPago":4,"transaccionId":"TX-MR0UGTIH","metodo_pago":"transferencia","monto":30000,"estado":"Aprobado","fecha":"2026-06-30T16:11:46.734Z"}}
+--------------------
+[REQUEST] 2026-06-30T16:11:46.789Z - GET /api/reservas/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:11:47.605Z - GET /api/reservas/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":15,"codigo":"PLAY-VUVKKT","userId":10,"canchaId":7,"recintoId":4,"recintoNombre":"Estadio Municipal Maipú","canchaNombre":"Fútbol 11 Césped Natural","deporte":"fútbol","fecha":"2026-07-04","horaInicio":"10:00:00","horaFin":"11:00:00","duracionHoras":1,"precioPorHora":30000,"total":30000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:11:44.402268+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:12.446Z - POST /api/evaluaciones
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"118","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"reservaId":15,"recintoId":4,"puntuacionGeneral":"4","limpiezaCancha":"3","puntualidad":"4","comentarios":"nada mal"}
+[RESPONSE] Status: 201
+Body: {"mensaje":"Evaluación registrada correctamente. ¡Gracias por tus comentarios!","evaluacion":{"id":2,"reservaId":15,"userId":10,"recintoId":4,"puntuacionGeneral":4,"limpiezaCancha":3,"puntualidad":4,"comentarios":"nada mal","fechaEvaluacion":"2026-06-30T16:12:13.338Z"}}
+--------------------
+[REQUEST] 2026-06-30T16:12:14.897Z - GET /api/reservas/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"18b-mr9r3p0P1ArErfA0xpvkvt7h3Tk\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":15,"codigo":"PLAY-VUVKKT","userId":10,"canchaId":7,"recintoId":4,"recintoNombre":"Estadio Municipal Maipú","canchaNombre":"Fútbol 11 Césped Natural","deporte":"fútbol","fecha":"2026-07-04","horaInicio":"10:00:00","horaFin":"11:00:00","duracionHoras":1,"precioPorHora":30000,"total":30000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:11:44.402268+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:25.196Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:25.841Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:25.847Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:25.851Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:25.855Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:25.858Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:25.861Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:26.155Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:29.018Z - GET /api/recintos/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"51-++gIDda8buyxh87EqcG0HQlXq0I\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:29.022Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: {"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"}
+--------------------
+[REQUEST] 2026-06-30T16:12:29.255Z - GET /api/evaluaciones/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"5e-I0jLCZkvZx8mgCJ6g4TDlpAwBGM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"evaluaciones":[{"id":2,"reservaId":15,"userId":10,"recintoId":4,"puntuacionGeneral":4,"limpiezaCancha":3,"puntualidad":4,"comentarios":"nada mal","fechaEvaluacion":"2026-06-30T16:12:13.338Z","usuarioNombre":"Camilo Rodriguez"}],"promedioGeneral":4,"promedioLimpieza":3,"promedioPuntualidad":4,"total":1}
+--------------------
+[REQUEST] 2026-06-30T16:12:35.651Z - GET /api/reservas/usuario/10
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxMCwiaWRfcm9sIjozLCJpYXQiOjE3ODI4MzU4MDksImV4cCI6MTc4Mjg0MzAwOX0.x2lvU_tBxgUaIOaf5DHvQKlu6QsfAekLVTYLKDtS118","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"18b-mr9r3p0P1ArErfA0xpvkvt7h3Tk\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":15,"codigo":"PLAY-VUVKKT","userId":10,"canchaId":7,"recintoId":4,"recintoNombre":"Estadio Municipal Maipú","canchaNombre":"Fútbol 11 Césped Natural","deporte":"fútbol","fecha":"2026-07-04","horaInicio":"10:00:00","horaFin":"11:00:00","duracionHoras":1,"precioPorHora":30000,"total":30000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:11:44.402268+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:38.441Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:38.752Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:38.757Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:38.763Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:38.768Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:38.771Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:38.775Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:38.957Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:12:41.390Z - GET /api/recintos/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"55-OviyVlM7rFMJI8/pAQDI1XkjG4E\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:12:41.393Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: {"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"}
+--------------------
+[REQUEST] 2026-06-30T16:12:41.844Z - GET /api/evaluaciones/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"5e-I0jLCZkvZx8mgCJ6g4TDlpAwBGM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"evaluaciones":[],"promedioGeneral":0,"promedioLimpieza":0,"promedioPuntualidad":0,"total":0}
+--------------------
+[REQUEST] 2026-06-30T16:27:53.773Z - GET /api/evaluaciones/recinto/
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 404
+Body: {"error":"La ruta solicitada no existe"}
+--------------------
+[REQUEST] 2026-06-30T16:28:34.208Z - GET /api/evaluaciones/
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 404
+Body: {"error":"La ruta solicitada no existe"}
+--------------------
+[REQUEST] 2026-06-30T16:28:37.114Z - GET /api/evaluaciones
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 404
+Body: {"error":"La ruta solicitada no existe"}
+--------------------
+[REQUEST] 2026-06-30T16:28:45.305Z - GET /api/evaluaciones/
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 404
+Body: {"error":"La ruta solicitada no existe"}
+--------------------
+[REQUEST] 2026-06-30T16:29:24.576Z - GET /api/reservas/
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 401
+Body: {"error":"Acceso denegado: No se proporcionó un token."}
+--------------------
+[REQUEST] 2026-06-30T16:30:23.811Z - GET /api/auth/registro
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 404
+Body: {"error":"La ruta solicitada no existe"}
+--------------------
+[REQUEST] 2026-06-30T16:30:39.483Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:32:38.463Z - GET /api/reportes
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"none","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 401
+Body: {"error":"Acceso denegado: No se proporcionó un token."}
+--------------------
+[REQUEST] 2026-06-30T16:37:33.580Z - POST /api/auth/login
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"59","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"email":"benjaminomar241@gmail.com","contrasena":"123456"}
+[RESPONSE] Status: 200
+Body: {"mensaje":"Login exitoso","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","usuario":{"id_usuario":9,"nombre":"Benjamin Gonzalez","email":"benjaminomar241@gmail.com","id_rol":3,"rut":"21.847.149-8","telefono":"997759267"}}
+--------------------
+[REQUEST] 2026-06-30T16:37:38.894Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:37:39.125Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:37:39.130Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:37:39.135Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:37:39.137Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:37:39.141Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:37:39.146Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:37:39.367Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:37:43.246Z - GET /api/recintos/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"48-w+GHP2jyMCBQjcRpLrywvoU6auU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:37:43.249Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: {"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"}
+--------------------
+[REQUEST] 2026-06-30T16:37:43.463Z - GET /api/evaluaciones/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"5e-I0jLCZkvZx8mgCJ6g4TDlpAwBGM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"evaluaciones":[{"id":1,"reservaId":14,"userId":9,"recintoId":2,"puntuacionGeneral":5,"limpiezaCancha":5,"puntualidad":5,"comentarios":"la verdad es que estaba muy bueno","fechaEvaluacion":"2026-06-30T15:50:54.275Z","usuarioNombre":"Benjamin Gonzalez"}],"promedioGeneral":5,"promedioLimpieza":5,"promedioPuntualidad":5,"total":1}
+--------------------
+[REQUEST] 2026-06-30T16:38:02.295Z - GET /api/recintos/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"48-w+GHP2jyMCBQjcRpLrywvoU6auU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:38:02.302Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"}
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:38:02.924Z - GET /api/horarios/cancha/3?fecha=2026-06-30
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"46b-YBPF4QxPeRm22WNVRCNIIHN6xQY\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id_horario":151,"id_cancha":3,"dia_semana":2,"hora_inicio":"08:00:00","hora_fin":"09:00:00","disponible":true},{"id_horario":152,"id_cancha":3,"dia_semana":2,"hora_inicio":"09:00:00","hora_fin":"10:00:00","disponible":true},{"id_horario":153,"id_cancha":3,"dia_semana":2,"hora_inicio":"10:00:00","hora_fin":"11:00:00","disponible":true},{"id_horario":154,"id_cancha":3,"dia_semana":2,"hora_inicio":"11:00:00","hora_fin":"12:00:00","disponible":true},{"id_horario":155,"id_cancha":3,"dia_semana":2,"hora_inicio":"14:00:00","hora_fin":"15:00:00","disponible":true},{"id_horario":156,"id_cancha":3,"dia_semana":2,"hora_inicio":"15:00:00","hora_fin":"16:00:00","disponible":true},{"id_horario":157,"id_cancha":3,"dia_semana":2,"hora_inicio":"16:00:00","hora_fin":"17:00:00","disponible":true},{"id_horario":158,"id_cancha":3,"dia_semana":2,"hora_inicio":"18:00:00","hora_fin":"19:00:00","disponible":true},{"id_horario":159,"id_cancha":3,"dia_semana":2,"hora_inicio":"19:00:00","hora_fin":"20:00:00","disponible":true},{"id_horario":160,"id_cancha":3,"dia_semana":2,"hora_inicio":"20:00:00","hora_fin":"21:00:00","disponible":true}]
+--------------------
+[REQUEST] 2026-06-30T16:38:05.406Z - GET /api/horarios/cancha/3?fecha=2026-07-02
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id_horario":171,"id_cancha":3,"dia_semana":4,"hora_inicio":"08:00:00","hora_fin":"09:00:00","disponible":true},{"id_horario":172,"id_cancha":3,"dia_semana":4,"hora_inicio":"09:00:00","hora_fin":"10:00:00","disponible":true},{"id_horario":173,"id_cancha":3,"dia_semana":4,"hora_inicio":"10:00:00","hora_fin":"11:00:00","disponible":true},{"id_horario":174,"id_cancha":3,"dia_semana":4,"hora_inicio":"11:00:00","hora_fin":"12:00:00","disponible":true},{"id_horario":175,"id_cancha":3,"dia_semana":4,"hora_inicio":"14:00:00","hora_fin":"15:00:00","disponible":true},{"id_horario":176,"id_cancha":3,"dia_semana":4,"hora_inicio":"15:00:00","hora_fin":"16:00:00","disponible":true},{"id_horario":177,"id_cancha":3,"dia_semana":4,"hora_inicio":"16:00:00","hora_fin":"17:00:00","disponible":true},{"id_horario":178,"id_cancha":3,"dia_semana":4,"hora_inicio":"18:00:00","hora_fin":"19:00:00","disponible":true},{"id_horario":179,"id_cancha":3,"dia_semana":4,"hora_inicio":"19:00:00","hora_fin":"20:00:00","disponible":true},{"id_horario":180,"id_cancha":3,"dia_semana":4,"hora_inicio":"20:00:00","hora_fin":"21:00:00","disponible":true}]
+--------------------
+[REQUEST] 2026-06-30T16:38:16.683Z - POST /api/reservas
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"100","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"id_cancha":3,"fecha":"2026-07-02","hora_inicio":"20:00:00","hora_fin":"21:00:00","id_horario":180}
+[RESPONSE] Status: 201
+Body: {"mensaje":"¡Reserva creada! Pendiente de pago para confirmar.","reserva":{"id_reserva":16,"codigo_reserva":"PLAY-4TN7CD","id":16,"codigo":"PLAY-4TN7CD","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-02","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"pendiente","fechaCreacion":"2026-06-30T16:38:16.493202+00:00"}}
+--------------------
+[REQUEST] 2026-06-30T16:38:17.783Z - POST /api/reservas/16/pagar
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"24","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"metodo_pago":"webpay"}
+[RESPONSE] Status: 200
+Body: {"mensaje":"Pago simulado procesado con éxito y reserva confirmada.","reserva":{"id_reserva":16,"codigo_reserva":"PLAY-4TN7CD","id":16,"codigo":"PLAY-4TN7CD","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-02","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:38:16.493202+00:00"},"pagoSimulado":{"idPago":5,"transaccionId":"TX-MR0VEXQG","metodo_pago":"webpay","monto":14000,"estado":"Aprobado","fecha":"2026-06-30T16:38:18.382Z"}}
+--------------------
+[REQUEST] 2026-06-30T16:38:18.426Z - GET /api/reservas/usuario/9
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"186-3fPknILGRTgfFIg5/n9Moqibdq8\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":14,"codigo":"PLAY-9W79J3","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-03","horaInicio":"14:00:00","horaFin":"15:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T15:50:20.44787+00:00"},{"id":16,"codigo":"PLAY-4TN7CD","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-02","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:38:16.493202+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:38:26.621Z - GET /api/horarios/cancha/3?fecha=2026-07-02
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"46b-mVFHIzA6sZNYh4yXkgLkdDK5Tk4\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id_horario":171,"id_cancha":3,"dia_semana":4,"hora_inicio":"08:00:00","hora_fin":"09:00:00","disponible":true},{"id_horario":172,"id_cancha":3,"dia_semana":4,"hora_inicio":"09:00:00","hora_fin":"10:00:00","disponible":true},{"id_horario":173,"id_cancha":3,"dia_semana":4,"hora_inicio":"10:00:00","hora_fin":"11:00:00","disponible":true},{"id_horario":174,"id_cancha":3,"dia_semana":4,"hora_inicio":"11:00:00","hora_fin":"12:00:00","disponible":true},{"id_horario":175,"id_cancha":3,"dia_semana":4,"hora_inicio":"14:00:00","hora_fin":"15:00:00","disponible":true},{"id_horario":176,"id_cancha":3,"dia_semana":4,"hora_inicio":"15:00:00","hora_fin":"16:00:00","disponible":true},{"id_horario":177,"id_cancha":3,"dia_semana":4,"hora_inicio":"16:00:00","hora_fin":"17:00:00","disponible":true},{"id_horario":178,"id_cancha":3,"dia_semana":4,"hora_inicio":"18:00:00","hora_fin":"19:00:00","disponible":true},{"id_horario":179,"id_cancha":3,"dia_semana":4,"hora_inicio":"19:00:00","hora_fin":"20:00:00","disponible":true},{"id_horario":180,"id_cancha":3,"dia_semana":4,"hora_inicio":"20:00:00","hora_fin":"21:00:00","disponible":false}]
+--------------------
+[REQUEST] 2026-06-30T16:38:44.433Z - POST /api/evaluaciones
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"119","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"reservaId":16,"recintoId":2,"puntuacionGeneral":"3","limpiezaCancha":"4","puntualidad":"4","comentarios":"esta bien"}
+[RESPONSE] Status: 201
+Body: {"mensaje":"Evaluación registrada correctamente. ¡Gracias por tus comentarios!","evaluacion":{"id":3,"reservaId":16,"userId":9,"recintoId":2,"puntuacionGeneral":3,"limpiezaCancha":4,"puntualidad":4,"comentarios":"esta bien","fechaEvaluacion":"2026-06-30T16:38:44.924Z"}}
+--------------------
+[REQUEST] 2026-06-30T16:38:48.008Z - GET /api/reservas/usuario/9
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"30c-nUUsUo7oWPH/+oUeQavLIWReF/Y\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":14,"codigo":"PLAY-9W79J3","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-03","horaInicio":"14:00:00","horaFin":"15:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T15:50:20.44787+00:00"},{"id":16,"codigo":"PLAY-4TN7CD","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-02","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:38:16.493202+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:38:54.950Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[REQUEST] 2026-06-30T16:38:55.224Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:38:55.228Z - GET /api/canchas/recinto/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-40hyLXLoOfyN2Ukjt+mL1xSxCRU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:38:55.233Z - GET /api/canchas/recinto/3
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-tmswkVjLykTA1rygIkKPSKm7HOk\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:38:55.237Z - GET /api/canchas/recinto/4
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"17a-B28qxdzx76A/VgPeVEkvvaZR6/Q\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:38:55.240Z - GET /api/canchas/recinto/5
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"162-M869ZUaPHjQEUl6yclHXWm2cvDM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:38:55.244Z - GET /api/canchas/recinto/6
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"16b-vVAlt9XGNUOf3/boLY9ZgOzmXXI\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:38:55.430Z - GET /api/canchas/recinto/7
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"157-WwR9QeWnNa3DMXcqM3Tpf8g9PHw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":5,"idRecinto":3,"nombre":"Pádel Panorámica 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":25000,"precioBloque":12500,"estado":"disponible"},{"id":6,"idRecinto":3,"nombre":"Tenis Profesional A","deporte":"tenis","superficie":"Hard court","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":7,"idRecinto":4,"nombre":"Fútbol 11 Césped Natural","deporte":"fútbol","superficie":"Césped natural","capacidad":22,"precioPorHora":30000,"precioBloque":15000,"estado":"disponible"},{"id":8,"idRecinto":4,"nombre":"Fútbol 7 Rápido","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":11,"idRecinto":6,"nombre":"Fútbol 7 La Florida","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"},{"id":12,"idRecinto":6,"nombre":"Pádel Outdoor 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":20000,"precioBloque":10000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":13,"idRecinto":7,"nombre":"Tenis Arcilla 1","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":15000,"precioBloque":7500,"estado":"disponible"},{"id":14,"idRecinto":7,"nombre":"Pádel Club Sur","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":9,"idRecinto":5,"nombre":"Vóleibol de Playa 1","deporte":"vóleibol","superficie":"Arena","capacidad":12,"precioPorHora":12000,"precioBloque":6000,"estado":"disponible"},{"id":10,"idRecinto":5,"nombre":"Tenis Arcilla Central","deporte":"tenis","superficie":"Arcilla","capacidad":4,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":1,"idRecinto":1,"nombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","superficie":"Césped sintético","capacidad":14,"precioPorHora":18000,"precioBloque":9000,"estado":"disponible"},{"id":2,"idRecinto":1,"nombre":"Pádel Premium 1","deporte":"pádel","superficie":"Cristal","capacidad":4,"precioPorHora":22000,"precioBloque":11000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:38:58.476Z - GET /api/recintos/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"48-w+GHP2jyMCBQjcRpLrywvoU6auU\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:38:58.484Z - GET /api/canchas/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"170-csVjcNHkvEIS/XIRkHmJVETGsTo\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"}
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":3,"idRecinto":2,"nombre":"Básquetbol Principal","deporte":"básquetbol","superficie":"Parquet","capacidad":10,"precioPorHora":14000,"precioBloque":7000,"estado":"disponible"},{"id":4,"idRecinto":2,"nombre":"Fútbol 5 Techado","deporte":"fútbol","superficie":"Césped sintético","capacidad":10,"precioPorHora":16000,"precioBloque":8000,"estado":"disponible"}]
+--------------------
+[REQUEST] 2026-06-30T16:38:58.689Z - GET /api/evaluaciones/recinto/2
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"14a-JPvjAM/SlJNaDTvNNwvttSW20io\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: {"evaluaciones":[{"id":1,"reservaId":14,"userId":9,"recintoId":2,"puntuacionGeneral":5,"limpiezaCancha":5,"puntualidad":5,"comentarios":"la verdad es que estaba muy bueno","fechaEvaluacion":"2026-06-30T15:50:54.275Z","usuarioNombre":"Benjamin Gonzalez"},{"id":3,"reservaId":16,"userId":9,"recintoId":2,"puntuacionGeneral":3,"limpiezaCancha":4,"puntualidad":4,"comentarios":"esta bien","fechaEvaluacion":"2026-06-30T16:38:44.924Z","usuarioNombre":"Benjamin Gonzalez"}],"promedioGeneral":4,"promedioLimpieza":4.5,"promedioPuntualidad":4.5,"total":2}
+--------------------
+[REQUEST] 2026-06-30T16:39:07.081Z - GET /api/pagos/usuario/9
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"ae-SSE06RRThlW4mGI5fXxD8m65EKU\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":3,"reservaId":14,"userId":9,"monto":14000,"metodoPago":"tarjeta","estadoPago":"aprobado","fechaPago":"2026-06-30T15:50:25.560Z","referenciaTransaccion":"TX-MR0TPD7C"},{"id":5,"reservaId":16,"userId":9,"monto":14000,"metodoPago":"webpay","estadoPago":"aprobado","fechaPago":"2026-06-30T16:38:18.184Z","referenciaTransaccion":"TX-MR0VEXQG"}]
+--------------------
+[REQUEST] 2026-06-30T16:39:31.909Z - GET /api/reservas/usuario/9
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjo5LCJpZF9yb2wiOjMsImlhdCI6MTc4MjgzNzQ1NSwiZXhwIjoxNzgyODQ0NjU1fQ.h6mIdJe5V_B0HIzM7gyOQpVnDGhKM2znYbX9xFY80mA","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"30c-nUUsUo7oWPH/+oUeQavLIWReF/Y\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":14,"codigo":"PLAY-9W79J3","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-03","horaInicio":"14:00:00","horaFin":"15:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T15:50:20.44787+00:00"},{"id":16,"codigo":"PLAY-4TN7CD","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-02","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:38:16.493202+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:40:37.698Z - POST /api/auth/login
+Headers: {"host":"localhost:3000","connection":"keep-alive","content-length":"53","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","content-type":"application/json","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: {"email":"admin@playspot.cl","contrasena":"admin123"}
+[RESPONSE] Status: 200
+Body: {"mensaje":"Login exitoso","token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNzYzOCwiZXhwIjoxNzgyODQ0ODM4fQ.QZM2oFLeYQsGyYorpTCDlMvvuWQSMg6Hz5ves6cZcSs","usuario":{"id_usuario":1,"nombre":"Admin PlaySpot","email":"admin@playspot.cl","id_rol":1,"rut":"11.111.111-1","telefono":""}}
+--------------------
+[REQUEST] 2026-06-30T16:40:41.325Z - GET /api/pagos/usuario/1
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNzYzOCwiZXhwIjoxNzgyODQ0ODM4fQ.QZM2oFLeYQsGyYorpTCDlMvvuWQSMg6Hz5ves6cZcSs","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: []
+--------------------
+[REQUEST] 2026-06-30T16:40:42.074Z - GET /api/recintos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"22c-a4075ABVHNYXLI2Qz2Q9V3e5tvM\""}
+Body: undefined
+[REQUEST] 2026-06-30T16:40:42.077Z - GET /api/pagos
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNzYzOCwiZXhwIjoxNzgyODQ0ODM4fQ.QZM2oFLeYQsGyYorpTCDlMvvuWQSMg6Hz5ves6cZcSs","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd","if-none-match":"W/\"1ea-sTpAtQAXxNQzCbyFme+Yeh1pElw\""}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":1,"nombre":"Arena Providencia","direccion":"Av. Providencia 2145"},{"id":2,"nombre":"Club Deportivo Ñuñoa","direccion":"Av. Grecia 1800"},{"id":3,"nombre":"Padel Club Las Condes","direccion":"Av. Apoquindo 4500"},{"id":4,"nombre":"Estadio Municipal Maipú","direccion":"Av. Los Pajaritos 3200"},{"id":5,"nombre":"Sport Center Viña del Mar","direccion":"Av. San Martín 850"},{"id":6,"nombre":"Multideportivo La Florida","direccion":"Av. Vicuña Mackenna 6100"},{"id":7,"nombre":"Tennis Club Concepción","direccion":"Av. Pedro de Valdivia 1200"}]
+--------------------
+[RESPONSE] Status: 200
+Body: [{"id":1,"reservaId":99,"userId":2,"monto":15000,"metodoPago":"webpay","estadoPago":"aprobado","referenciaTransaccion":"TX-TEST12345"},{"id":2,"reservaId":13,"userId":7,"monto":16000,"metodoPago":"transferencia","estadoPago":"reembolsado","fechaPago":"2026-06-30T14:54:53.857Z","referenciaTransaccion":"TX-MR0RPYG1"},{"id":3,"reservaId":14,"userId":9,"monto":14000,"metodoPago":"tarjeta","estadoPago":"aprobado","fechaPago":"2026-06-30T15:50:25.560Z","referenciaTransaccion":"TX-MR0TPD7C"},{"id":4,"reservaId":15,"userId":10,"monto":30000,"metodoPago":"transferencia","estadoPago":"aprobado","fechaPago":"2026-06-30T16:11:46.409Z","referenciaTransaccion":"TX-MR0UGTIH"},{"id":5,"reservaId":16,"userId":9,"monto":14000,"metodoPago":"webpay","estadoPago":"aprobado","fechaPago":"2026-06-30T16:38:18.184Z","referenciaTransaccion":"TX-MR0VEXQG"}]
+--------------------
+[REQUEST] 2026-06-30T16:41:41.983Z - GET /api/reportes/fecha/2026-07-01
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNzYzOCwiZXhwIjoxNzgyODQ0ODM4fQ.QZM2oFLeYQsGyYorpTCDlMvvuWQSMg6Hz5ves6cZcSs","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":11,"codigo":"PLAY-PQVS7G","userId":2,"canchaId":1,"recintoId":1,"recintoNombre":"Arena Providencia","canchaNombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","fecha":"2026-07-01","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":18000,"total":18000,"metodoPago":"webpay","estado":"pendiente","fechaCreacion":"2026-06-30T03:08:59.558925+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:41:59.338Z - GET /api/reportes/rango?inicio=2026-06-29&fin=2026-07-12
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua-platform":"\"Windows\"","authorization":"Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNzYzOCwiZXhwIjoxNzgyODQ0ODM4fQ.QZM2oFLeYQsGyYorpTCDlMvvuWQSMg6Hz5ves6cZcSs","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"application/json, text/plain, */*","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","origin":"http://localhost:4200","sec-fetch-site":"same-site","sec-fetch-mode":"cors","sec-fetch-dest":"empty","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: [{"id":11,"codigo":"PLAY-PQVS7G","userId":2,"canchaId":1,"recintoId":1,"recintoNombre":"Arena Providencia","canchaNombre":"Cancha Fútbol 7 Norte","deporte":"fútbol","fecha":"2026-07-01","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":18000,"total":18000,"metodoPago":"webpay","estado":"pendiente","fechaCreacion":"2026-06-30T03:08:59.558925+00:00"},{"id":14,"codigo":"PLAY-9W79J3","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-03","horaInicio":"14:00:00","horaFin":"15:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T15:50:20.44787+00:00"},{"id":15,"codigo":"PLAY-VUVKKT","userId":10,"canchaId":7,"recintoId":4,"recintoNombre":"Estadio Municipal Maipú","canchaNombre":"Fútbol 11 Césped Natural","deporte":"fútbol","fecha":"2026-07-04","horaInicio":"10:00:00","horaFin":"11:00:00","duracionHoras":1,"precioPorHora":30000,"total":30000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:11:44.402268+00:00"},{"id":16,"codigo":"PLAY-4TN7CD","userId":9,"canchaId":3,"recintoId":2,"recintoNombre":"Club Deportivo Ñuñoa","canchaNombre":"Básquetbol Principal","deporte":"básquetbol","fecha":"2026-07-02","horaInicio":"20:00:00","horaFin":"21:00:00","duracionHoras":1,"precioPorHora":14000,"total":14000,"metodoPago":"webpay","estado":"confirmada","fechaCreacion":"2026-06-30T16:38:16.493202+00:00"}]
+--------------------
+[REQUEST] 2026-06-30T16:42:22.712Z - GET /api/reportes/exportar/pdf?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZF91c3VhcmlvIjoxLCJpZF9yb2wiOjEsImlhdCI6MTc4MjgzNzYzOCwiZXhwIjoxNzgyODQ0ODM4fQ.QZM2oFLeYQsGyYorpTCDlMvvuWQSMg6Hz5ves6cZcSs&inicio=2026-06-29&fin=2026-07-12
+Headers: {"host":"localhost:3000","connection":"keep-alive","sec-ch-ua":"\"Brave\";v=\"149\", \"Chromium\";v=\"149\", \"Not)A;Brand\";v=\"24\"","sec-ch-ua-mobile":"?0","sec-ch-ua-platform":"\"Windows\"","upgrade-insecure-requests":"1","user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36","accept":"text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8","sec-gpc":"1","accept-language":"es-ES,es;q=0.9","sec-fetch-site":"same-site","sec-fetch-mode":"navigate","sec-fetch-user":"?1","sec-fetch-dest":"document","referer":"http://localhost:4200/","accept-encoding":"gzip, deflate, br, zstd"}
+Body: undefined
+[RESPONSE] Status: 200
+Body: 
+        <!DOCTYPE html>
+        <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <title>Reporte de Reservas - PlaySpot</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+                
+                body {
+                    font-family: 'Outfit', sans-serif;
+                    color: #1e293b;
+                    margin: 0;
+                    padding: 40px;
+                    background-color: #ffffff;
+                }
+                
+                .header {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border-bottom: 2px solid #f1f5f9;
+                    padding-bottom: 20px;
+                    margin-bottom: 30px;
+                }
+                
+                .logo {
+                    font-size: 28px;
+                    font-weight: 700;
+                    color: #047857;
+                }
+                
+                .title-area h1 {
+                    font-size: 24px;
+                    margin: 0;
+                    color: #0f172a;
+                }
+                
+                .title-area p {
+                    font-size: 14px;
+                    color: #64748b;
+                    margin: 5px 0 0;
+                }
+                
+                .stats-grid {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    gap: 20px;
+                    margin-bottom: 35px;
+                }
+                
+                .stat-card {
+                    background: #f8fafc;
+                    border: 1px solid #e2e8f0;
+                    border-radius: 12px;
+                    padding: 20px;
+                    text-align: center;
+                }
+                
+                .stat-card span {
+                    display: block;
+                    font-size: 12px;
+                    color: #64748b;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    margin-bottom: 5px;
+                }
+                
+                .stat-card strong {
+                    font-size: 24px;
+                    color: #0f172a;
+                    font-weight: 700;
+                }
+                
+                .stat-card.primary strong {
+                    color: #047857;
+                }
+                
+                table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    margin-top: 20px;
+                    font-size: 14px;
+                }
+                
+                th, td {
+                    padding: 12px 15px;
+                    text-align: left;
+                    border-bottom: 1px solid #e2e8f0;
+                }
+                
+                th {
+                    background-color: #f1f5f9;
+                    color: #475569;
+                    font-weight: 600;
+                }
+                
+                tr:hover {
+                    background-color: #f8fafc;
+                }
+                
+                .badge {
+                    display: inline-block;
+                    padding: 4px 8px;
+                    border-radius: 9999px;
+                    font-size: 11px;
+                    font-weight: 600;
+                    text-transform: capitalize;
+                }
+                
+                .badge-confirmada {
+                    background-color: #d1fae5;
+                    color: #065f46;
+                }
+                
+                .badge-pendiente {
+                    background-color: #fef3c7;
+                    color: #92400e;
+                }
+                
+                .badge-cancelada {
+                    background-color: #fee2e2;
+                    color: #991b1b;
+                }
+
+                @media print {
+                    body {
+                        padding: 0;
+                    }
+                    .no-print {
+                        display: none;
+                    }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <div class="title-area">
+                    <h1>Reporte de Reservas</h1>
+                    <p>Filtro: 2026-06-29 hasta 2026-07-12</p>
+                </div>
+                <div class="logo">PlaySpot</div>
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-card primary">
+                    <span>Ingresos Totales</span>
+                    <strong>$76.000</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Total Reservas</span>
+                    <strong>4</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Confirmadas</span>
+                    <strong>3</strong>
+                </div>
+                <div class="stat-card">
+                    <span>Pendientes</span>
+                    <strong>1</strong>
+                </div>
+            </div>
+            
+            <h2>Listado Detallado de Reservas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Recinto</th>
+                        <th>Cancha</th>
+                        <th>Deporte</th>
+                        <th>Fecha</th>
+                        <th>Horario</th>
+                        <th>Total</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                        <tr>
+                            <td><strong>PLAY-PQVS7G</strong></td>
+                            <td>Arena Providencia</td>
+                            <td>Cancha Fútbol 7 Norte</td>
+                            <td style="text-transform: capitalize;">fútbol</td>
+                            <td>2026-07-01</td>
+                            <td>20:00 - 21:00</td>
+                            <td>$18.000</td>
+                            <td>
+                                <span class="badge badge-pendiente">pendiente</span>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td><strong>PLAY-9W79J3</strong></td>
+                            <td>Club Deportivo Ñuñoa</td>
+                            <td>Básquetbol Principal</td>
+                            <td style="text-transform: capitalize;">básquetbol</td>
+                            <td>2026-07-03</td>
+                            <td>14:00 - 15:00</td>
+                            <td>$14.000</td>
+                            <td>
+                                <span class="badge badge-confirmada">confirmada</span>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td><strong>PLAY-VUVKKT</strong></td>
+                            <td>Estadio Municipal Maipú</td>
+                            <td>Fútbol 11 Césped Natural</td>
+                            <td style="text-transform: capitalize;">fútbol</td>
+                            <td>2026-07-04</td>
+                            <td>10:00 - 11:00</td>
+                            <td>$30.000</td>
+                            <td>
+                                <span class="badge badge-confirmada">confirmada</span>
+                            </td>
+                        </tr>
+                    
+                        <tr>
+                            <td><strong>PLAY-4TN7CD</strong></td>
+                            <td>Club Deportivo Ñuñoa</td>
+                            <td>Básquetbol Principal</td>
+                            <td style="text-transform: capitalize;">básquetbol</td>
+                            <td>2026-07-02</td>
+                            <td>20:00 - 21:00</td>
+                            <td>$14.000</td>
+                            <td>
+                                <span class="badge badge-confirmada">confirmada</span>
+                            </td>
+                        </tr>
+                    
+                </tbody>
+            </table>
+            
+            <script>
+                // Activar el cuadro de diálogo de impresión/PDF automáticamente
+                window.onload = function() {
+                    window.print();
+                };
+            </script>
+        </body>
+        </html>
+        
+--------------------

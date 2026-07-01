@@ -28,6 +28,26 @@
       "estadoPago": "aprobado",
       "fechaPago": "2026-06-30T15:50:25.560Z",
       "referenciaTransaccion": "TX-MR0TPD7C"
+    },
+    {
+      "id": 4,
+      "reservaId": 15,
+      "userId": 10,
+      "monto": 30000,
+      "metodoPago": "transferencia",
+      "estadoPago": "aprobado",
+      "fechaPago": "2026-06-30T16:11:46.409Z",
+      "referenciaTransaccion": "TX-MR0UGTIH"
+    },
+    {
+      "id": 5,
+      "reservaId": 16,
+      "userId": 9,
+      "monto": 14000,
+      "metodoPago": "webpay",
+      "estadoPago": "aprobado",
+      "fechaPago": "2026-06-30T16:38:18.184Z",
+      "referenciaTransaccion": "TX-MR0VEXQG"
     }
   ],
   "evaluaciones": [
@@ -41,12 +61,38 @@
       "puntualidad": 5,
       "comentarios": "la verdad es que estaba muy bueno",
       "fechaEvaluacion": "2026-06-30T15:50:54.275Z"
+    },
+    {
+      "id": 2,
+      "reservaId": 15,
+      "userId": 10,
+      "recintoId": 4,
+      "puntuacionGeneral": 4,
+      "limpiezaCancha": 3,
+      "puntualidad": 4,
+      "comentarios": "nada mal",
+      "fechaEvaluacion": "2026-06-30T16:12:13.338Z"
+    },
+    {
+      "id": 3,
+      "reservaId": 16,
+      "userId": 9,
+      "recintoId": 2,
+      "puntuacionGeneral": 3,
+      "limpiezaCancha": 4,
+      "puntualidad": 4,
+      "comentarios": "esta bien",
+      "fechaEvaluacion": "2026-06-30T16:38:44.924Z"
     }
   ],
   "usuarios_metadata": [
     {
       "userId": 9,
       "telefono": "997759267"
+    },
+    {
+      "userId": 10,
+      "telefono": "988776656"
     }
   ]
 }
